@@ -1,4 +1,4 @@
-# Manage Customers
+# Find Customers
 This is an Elixir APP that provides a service to find customers within kms of a Dublin office.
 
 To start your Phoenix server:
