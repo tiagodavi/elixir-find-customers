@@ -1,8 +1,8 @@
-defmodule ManageWeb.ApiView do
+defmodule ManageWeb.CustomerView do
   use ManageWeb, :view
 
   def render("customers.json", %{data: customers}) do
-    render_many(customers, ManageWeb.ApiView, "customer.json", as: :data)
+    render_many(customers, ManageWeb.CustomerView, "customer.json", as: :data)
   end
 
   def render("customer.json", %{data: customer}) do

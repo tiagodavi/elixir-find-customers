@@ -7,7 +7,7 @@ defmodule ManageWeb.Router do
 
   scope "/api", ManageWeb do
     pipe_through(:api)
-    get("/customers/:distance", ApiController, :index)
+    get("/customers/:distance", CustomerController, :index)
   end
 
   scope "/", ManageWeb do

@@ -1,14 +1,15 @@
-defmodule ManageWeb.ApiController do
+defmodule ManageWeb.CustomerController do
   @moduledoc """
   This is the main controller to access the entire api
   """
 
   use ManageWeb, :controller
+  alias Manage.Models.Customer
 
   action_fallback(ManageWeb.FallBackController)
 
-  def index(conn, _params) do
-    with {:ok, customers} <- {:error, "Customers not found"} do
+  def index(conn, %{"distance" => distance}) do
+    with {:ok, customers} <- Customer.load(distance) do
       render(conn, "customers.json", %{data: customers})
     end
   end
