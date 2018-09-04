@@ -36,7 +36,9 @@ defmodule Manage.Mixfile do
       {:phoenix_pubsub, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false}
+      {:credo, "~> 0.10.0", only: [:dev, :test], runtime: false},
+      {:distance, "~> 0.2.1"},
+      {:httpoison, "~> 1.0"}
     ]
   end
 end

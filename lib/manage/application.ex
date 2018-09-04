@@ -13,9 +13,9 @@ defmodule Manage.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(ManageWeb.Endpoint, [])
+      supervisor(ManageWeb.Endpoint, []),
       # Start your own worker by calling: Manage.Worker.start_link(arg1, arg2, arg3)
-      # worker(Manage.Worker, [arg1, arg2, arg3]),
+      worker(Manage.Models.CustomerCache, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -9,6 +9,8 @@ defmodule ManageWeb.CustomerController do
   action_fallback(ManageWeb.FallBackController)
 
   def index(conn, %{"distance" => distance}) do
+    {distance, ""} = Integer.parse(distance)
+
     with {:ok, customers} <- Customer.load(distance) do
       render(conn, "customers.json", %{data: customers})
     end

@@ -7,10 +7,10 @@ defmodule ManageWeb.CustomerView do
 
   def render("customer.json", %{data: customer}) do
     %{
-      latitude: customer.latitude,
+      latitude: customer.lat,
       user_id: customer.user_id,
       name: customer.name,
-      longitude: customer.longitude
+      longitude: customer.lon
     }
   end
 end
